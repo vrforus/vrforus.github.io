@@ -8,8 +8,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js)$/,
-        exclude: /node_modules/,
+        test: /\.(js|jsx)$/,
         use: ['babel-loader', 'eslint-loader'],
       },
       {
@@ -19,7 +18,7 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['*', '.js'],
+    extensions: ['*', '.js', '.jsx'],
   },
   output: {
     path: path.resolve(__dirname, './dist'),
@@ -35,5 +34,6 @@ module.exports = {
   ],
   devServer: {
     contentBase: path.resolve(__dirname, './dist'),
+    historyApiFallback: true,
   },
 };
