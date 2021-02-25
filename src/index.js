@@ -1,1 +1,1 @@
-console.log('Hello Webpack Project.');
+import './styles/main.scss';
