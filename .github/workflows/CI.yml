@@ -34,7 +34,8 @@ jobs:
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions"
-          git subtree split -P "$BUILD_DIR" -b ${{ github.event.inputs.branch }} &> /dev/null || echo the branch not found
+          git branch -d ${{ github.event.inputs.branch }} &> /dev/null || echo the branch not found
+          git subtree split -P "$BUILD_DIR" -b ${{ github.event.inputs.branch }}
           git checkout ${{ github.event.inputs.branch }}
           git push -f -u origin ${{ github.event.inputs.branch }}
         env:
