@@ -32,8 +32,6 @@ jobs:
 
       - name: Push to the ${{ github.event.inputs.branch }} branch
         run: |
-#          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-#          git config --local user.name "github-actions"
           git branch -d ${{ github.event.inputs.branch }} &> /dev/null || echo the branch not found
           git subtree split -P "$BUILD_DIR" -b ${{ github.event.inputs.branch }}
           git checkout ${{ github.event.inputs.branch }}
