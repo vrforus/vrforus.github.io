@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   entry: path.resolve(__dirname, './src/index.js'),
@@ -9,7 +10,8 @@ module.exports = {
     rules: [
       {
         test: /\.(js|jsx)$/,
-        use: ['babel-loader', 'eslint-loader'],
+        // use: ['babel-loader', 'eslint-loader'],
+        use: ['babel-loader'],
       },
       {
         test: /\.(scss|css)$/,
@@ -31,6 +33,7 @@ module.exports = {
       title: 'Hello Webpack bundled JavaScript Project',
       template: path.resolve(__dirname, './src/index.html'),
     }),
+    new Dotenv(),
   ],
   devServer: {
     contentBase: path.resolve(__dirname, './dist'),
