@@ -6,6 +6,10 @@
   },
   "rules": {
     "max-len": [1, 120, 2, {"ignoreComments": true}],
-    "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }]
+    "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+    "react/jsx-props-no-spreading": "off",
+    "react/prefer-stateless-function": [2, { "ignorePureComponents": true }],
+    "react/prop-types": "off",
+    "jsx-a11y/label-has-associated-control": "off"
   }
 }

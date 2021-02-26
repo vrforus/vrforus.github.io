@@ -1,4 +1,5 @@
 import app from 'firebase/app';
+import 'firebase/database';
 
 const config = {
   apiKey: process.env.REACT_APP_API_KEY,
@@ -12,6 +13,13 @@ const config = {
 class Firebase {
   constructor() {
     app.initializeApp(config);
+
+    this.timestamp = app.database.ServerValue.TIMESTAMP;
+    this.db = app.database();
+  }
+
+  subscriptions() {
+    return this.db.ref('subscriptions');
   }
 }
 
