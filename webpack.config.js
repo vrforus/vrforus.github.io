@@ -30,8 +30,9 @@ module.exports = {
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Hello Webpack bundled JavaScript Project',
+      title: 'VRfor.us',
       template: path.resolve(__dirname, './src/index.html'),
+      favicon: path.resolve(__dirname, './src/favicon.ico'),
     }),
     new Dotenv(),
   ],
