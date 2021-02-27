@@ -5,10 +5,19 @@
   //overflow: auto;
   padding: 6em 0 2em 0;
   height: 100%;
+  min-height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+
+  .product-name {
+    top: 50%;
+    font-family: $questrial;
+    margin: auto;
+    width: 50%;
+    text-align: center;
+  }
 }
 .navbar-default {
   background: none;
