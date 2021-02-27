@@ -32,16 +32,10 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Push to the ${{ github.event.inputs.branch }} branch
-        run: |
-          cd $BUILD_DIR
-          git init
-          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions"
-          git add .
-          git commit -m "Build"
-          echo "https://github.com/$GITHUB_REPOSITORY.git
-          git remote add origin https://github.com/$GITHUB_REPOSITORY.git
-          git push -f -u origin ${{ github.event.inputs.branch }}
-        env:
-          BUILD_DIR: dist
+      - name: Deploy into the ${{ github.event.inputs.branch }} branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          publish_branch: ${{ github.event.inputs.branch }}
+          allow_empty_commit: true
