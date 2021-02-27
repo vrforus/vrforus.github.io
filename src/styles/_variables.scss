@@ -15,3 +15,8 @@ $text-color: $color-3 !default;
 $open-sans: 'Open Sans', sans-serif;
 $questrial: 'Questrial', sans-serif;
 $font-size-base: 0.875rem !default;
+
+// Footer
+$footer-height: 3.5em;
+$footer-top-border: 0.0625em;
+$footer-total-height: calc(#{$footer-height + $footer-top-border});
