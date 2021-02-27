@@ -32,13 +32,12 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          REACT_APP_API_KEY: ${{ secrets.REACT_APP_API_KEY }}
-          REACT_APP_AUTH_DOMAIN: ${{ secrets.REACT_APP_AUTH_DOMAIN }}
-          REACT_APP_DATABASE_URL: ${{ secrets.REACT_APP_DATABASE_URL }}
-          REACT_APP_PROJECT_ID: ${{ secrets.REACT_APP_PROJECT_ID }}
-          REACT_APP_STORAGE_BUCKET: ${{ secrets.REACT_APP_STORAGE_BUCKET }}
-          REACT_APP_MESSAGING_SENDER_ID: ${{ secrets.REACT_APP_MESSAGING_SENDER_ID }}
-
+          REACT_APP_API_KEY: AIzaSyDg01P4EHsOfUhpJNiit_lHFWzgiIomstg
+          REACT_APP_AUTH_DOMAIN: vr-for-us.firebaseapp.com
+          REACT_APP_DATABASE_URL: https://vr-for-us-default-rtdb.firebaseio.com
+          REACT_APP_PROJECT_ID: vr-for-us
+          REACT_APP_STORAGE_BUCKET: vr-for-us.appspot.com
+          REACT_APP_MESSAGING_SENDER_ID: G-81PEH610LR
 
       - name: Deploy into the ${{ github.event.inputs.branch }} branch
         uses: peaceiris/actions-gh-pages@v3
