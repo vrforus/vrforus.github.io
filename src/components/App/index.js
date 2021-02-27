@@ -13,15 +13,23 @@ import SubscribePage from '../Subscribe';
 import * as ROUTES from '../../constants/routes';
 import { withFirebase } from '../Firebase';
 
+const Header = () => (
+  <header>Logo</header>
+);
+
+const Footer = () => (
+  <footer><p>© 2021 VRfor.us </p></footer>
+);
+
 class App extends Component {
   render() {
     return (
       <div>
         <Router>
-          <Navigation />
-          <hr />
+          <Header />
           <Route exact path={ROUTES.HOME} component={HomePage} />
           <Route exact path={ROUTES.SUBSCRIBE} component={SubscribePage} />
+          <Footer />
         </Router>
       </div>
     );
