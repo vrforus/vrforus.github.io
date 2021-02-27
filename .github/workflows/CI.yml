@@ -34,8 +34,14 @@ jobs:
 
       - name: Push to the ${{ github.event.inputs.branch }} branch
         run: |
+          cd build
+          git init
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions"
-          gh-pages -d dist -b ${{ github.event.inputs.branch }}
+          git add .
+          git commit -m "Build"
+          echo "https://github.com/$GITHUB_REPOSITORY.git
+          git remote add origin https://github.com/$GITHUB_REPOSITORY.git
+          git push -f -u origin ${{ github.event.inputs.branch }}
         env:
           BUILD_DIR: dist
