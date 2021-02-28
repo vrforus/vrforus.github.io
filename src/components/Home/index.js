@@ -8,8 +8,8 @@ const Home = () => (
       <div className="shooting_star" />
       <div className="shooting_star" />
     </div>
-    <Container className="h-100 align-self-center">
-      <Row className="justify-content-md-center  text-center">
+    <Container>
+      <Row className="justify-content-md-center text-center">
         <Col className="product-name">
           <h1>Our Earth</h1>
           <h2>a virtual reality simulator<br />for education</h2>
