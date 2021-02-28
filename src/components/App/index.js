@@ -14,7 +14,7 @@ import SubscribePage from '../Subscribe';
 import * as ROUTES from '../../constants/routes';
 import { withFirebase } from '../Firebase';
 
-export const useScrollHandler = () => {
+export const ScrollerHandler = () => {
   const [scroll, setScroll] = useState(1);
 
   useEffect(() => {
@@ -36,7 +36,7 @@ export const useScrollHandler = () => {
 };
 
 const Header = () => {
-  const scroll = useScrollHandler();
+  const scroll = ScrollerHandler();
 
   return (
     <>
