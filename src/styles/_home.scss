@@ -11,11 +11,13 @@
   background-attachment: fixed;
 
   .product-name {
-    top: 50%;
     font-family: $questrial;
-    margin: auto;
-    width: 50%;
-    text-align: center;
+
+    h1 {
+      text-shadow: 0 3px 6px rgba(255, 0, 0, 0.961);
+      letter-spacing: 0.15em;
+      font-size: 5em;
+    }
   }
 }
 .navbar-default {
