@@ -9,12 +9,13 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  text-shadow: 0px 1px 6px rgba(255, 255, 255, 0.16);
 
   .product-name {
     font-family: $questrial;
 
     h1 {
-      text-shadow: 0 3px 6px rgba(255, 0, 0, 0.961);
+      text-shadow: 0 0 9px rgb(39, 136, 246);
       letter-spacing: 0.15em;
       font-size: 5em;
     }
@@ -45,8 +46,6 @@ $shooting-time: 3000ms;
   border-radius: 999px;
   filter: drop-shadow(0 0 6px rgb(224, 224, 224));
   animation:
-    //tail $shooting-time ease-in-out infinite,
-    //shooting $shooting-time ease-in-out infinite,
     tail $shooting-time ease-in-out,
     shooting $shooting-time ease-in-out,
     pause-animation #{$shooting-time * 2};
