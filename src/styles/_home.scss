@@ -30,6 +30,7 @@
 $shooting-time: 3000ms;
 
 .night {
+  position: relative;
   width: 80%;
   height: 80%;
   transform: rotateZ(45deg);
@@ -44,8 +45,10 @@ $shooting-time: 3000ms;
   border-radius: 999px;
   filter: drop-shadow(0 0 6px rgb(224, 224, 224));
   animation:
-    tail $shooting-time ease-in-out infinite,
-    shooting $shooting-time ease-in-out infinite,
+    //tail $shooting-time ease-in-out infinite,
+    //shooting $shooting-time ease-in-out infinite,
+    tail $shooting-time ease-in-out,
+    shooting $shooting-time ease-in-out,
     pause-animation #{$shooting-time * 2};
 
   &::before {
@@ -66,8 +69,8 @@ $shooting-time: 3000ms;
 
   &:nth-child(1) {
     $delay: 2700ms;
-    top: 4em;
-    left: 10em;
+    top: 1em;
+    left: 2em;
     opacity: 0.5;
     animation-delay: $delay;
 
@@ -81,7 +84,7 @@ $shooting-time: 3000ms;
     $delay: 3600ms;
 
     top: 5em;
-    left: calc(50vw + 6em);
+    left: 6em;
     opacity: 0.1;
     animation-delay: $delay;
 
@@ -95,7 +98,7 @@ $shooting-time: 3000ms;
     $delay: 7000ms;
 
     top: 6em;
-    left: 50vw;
+    left: 55vw;
     opacity: 0.1;
     animation-delay: $delay;
 
@@ -112,7 +115,7 @@ $shooting-time: 3000ms;
   }
 
   30% {
-    width: 100px;
+    width: 3em;
   }
 
   100% {
@@ -126,7 +129,7 @@ $shooting-time: 3000ms;
   }
 
   100% {
-    transform: translateX(300px);
+    transform: translateX(9em);
   }
 }
 
