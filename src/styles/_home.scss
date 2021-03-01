@@ -2,14 +2,14 @@
   background-image: url("../assets/bg.jpg");
   background-color: $color-3;
   color: $white;
-  padding: 6em 0 2em 0;
+  padding: 6em 0 4em 0;
   height: 100%;
   min-height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  text-shadow: 0px 1px 6px rgba(255, 255, 255, 0.16);
+  text-shadow: 0px 1px 6px rgba(0, 0, 0, 0.161);
 
   .product-name {
     font-family: $questrial;
@@ -22,8 +22,15 @@
   }
 
   .coming {
-    padding-top: 2em;
+    padding-top: 4em;
     text-shadow: 0px 1px 6px rgba(0, 0, 0, 0.161);
+  }
+
+  .subscribe {
+    padding-top: 4em;
+    p {
+      font-size: 1.25em;
+    }
   }
 }
 

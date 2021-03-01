@@ -36,6 +36,12 @@ const Home = () => {
             <h1>Coming soon!</h1>
           </Col>
         </Row>
+
+        <Row className="justify-content-md-center text-center">
+          <Col className="subscribe">
+            <p>Be the first to know when it will be launched</p>
+          </Col>
+        </Row>
       </Container>
     </div>
   );
