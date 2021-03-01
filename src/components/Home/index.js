@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import {Button, Col, Container, Row} from 'react-bootstrap';
 
 const Home = () => {
   const [shootStars, setShootStars] = useState(true);
@@ -40,6 +40,7 @@ const Home = () => {
         <Row className="justify-content-md-center text-center">
           <Col className="subscribe">
             <p>Be the first to know when it will be launched</p>
+            <Button>Subscribe</Button>
           </Col>
         </Row>
       </Container>

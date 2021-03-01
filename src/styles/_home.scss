@@ -2,7 +2,7 @@
   background-image: url("../assets/bg.jpg");
   background-color: $color-3;
   color: $white;
-  padding: 6em 0 4em 0;
+  padding: 6em 0 6em 0;
   height: 100%;
   min-height: 100vh;
   background-position: center;
@@ -23,13 +23,30 @@
 
   .coming {
     padding-top: 4em;
-    text-shadow: 0px 1px 6px rgba(0, 0, 0, 0.161);
   }
 
   .subscribe {
     padding-top: 4em;
     p {
+      text-shadow: 0px 1px 6px rgba(0, 0, 0, 0.5);
       font-size: 1.25em;
+    }
+
+    button {
+      font-size: 1.25em;
+      background-image: linear-gradient(to right, #3bd8e7 0%, #84368A 51%, #F16522 100%);
+      background-size: 200% auto;
+      border-radius: 0.5em;
+      //text-transform: uppercase;
+      border: none !important;
+      transition: 0.7s all;
+      display: inline-block;
+      width: 192px;
+      height: 40px;
+    }
+
+    button:hover {
+      background-position: right center;
     }
   }
 }
