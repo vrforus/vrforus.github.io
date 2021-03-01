@@ -2,18 +2,18 @@ import React, { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 
 const Home = () => {
-  const [shootStarts, setShootStarts] = useState(true);
+  const [shootStars, setShootStars] = useState(true);
 
   useEffect(() => {
-    const interval = setInterval(() => setShootStarts(!shootStarts), 15000);
+    const interval = setInterval(() => setShootStars(!shootStars), 15000);
     return () => {
       clearInterval(interval);
     };
-  }, [shootStarts]);
+  }, [shootStars]);
 
   return (
     <div className="home">
-      {shootStarts &&
+      {shootStars &&
         <div className="night">
           <div className="shooting_star" />
           <div className="shooting_star" />
