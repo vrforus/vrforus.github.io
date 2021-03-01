@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import {
   // BrowserRouter as Router,
   HashRouter as Router,
+  Redirect,
   Route,
 } from 'react-router-dom';
 import { Container, Navbar } from 'react-bootstrap';
@@ -63,8 +64,8 @@ const Footer = () => (
 const App = () => (
   <Router>
     <Header />
-    <Route exact path={ROUTES.HOME} component={HomePage} />
-    <Route exact path={ROUTES.SUBSCRIBE} component={SubscribePage} />
+    <Route path="/" component={HomePage} />
+    <Redirect to="/" />
     <Footer />
   </Router>
 );
