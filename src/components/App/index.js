@@ -39,19 +39,18 @@ const Header = () => {
   const scroll = ScrollerHandler();
 
   return (
-    <>
-      <Navbar expand="lg" fixed="top" className={(scroll) ? 'bg-transparent' : 'scroll'}>
-        <Container>
-          <Navbar.Brand href={ROUTES.HOME}>
-            <img
-              src={Logo}
-              className="d-inline-block align-top logo"
-              alt="VRfor.us"
-            />
-          </Navbar.Brand>
-        </Container>
-      </Navbar>
-    </>
+    <Navbar expand="lg" fixed="top" className="bg-transparent">
+      <div className={(scroll) ? '' : 'header'} />
+      <Container>
+        <Navbar.Brand href={ROUTES.HOME}>
+          <img
+            src={Logo}
+            className="d-inline-block align-top logo"
+            alt="VRfor.us"
+          />
+        </Navbar.Brand>
+      </Container>
+    </Navbar>
   );
 };
 
