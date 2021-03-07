@@ -39,6 +39,10 @@ module.exports = {
       title: 'VRfor.us',
       template: path.resolve(__dirname, './src/index.html'),
       favicon: path.resolve(__dirname, './src/favicon.ico'),
+      meta: {
+        viewport: 'width=device-width, initial-scale=1',
+        description: 'VRfor.us is an interactive virtual reality Earth and Space simulator that focuses on having the best immersive learning experience.',
+      },
     }),
     new CopyPlugin({
       patterns: [
