@@ -2,14 +2,22 @@ import React, { useEffect, useState } from 'react';
 import {
   Button, Col, Container, Row,
 } from 'react-bootstrap';
+import { useHistory, useLocation } from 'react-router';
 import Subscribe from '../Subscribe';
+import * as ROUTES from '../../constants/routes';
 
 const Home = (props) => {
+  const history = useHistory();
+  const location = useLocation();
+
   const [shootStars, setShootStars] = useState(true);
   const [showModal, setShowModal] = useState(false);
-  const handleShow = () => {
-    setShowModal(true);
-  };
+
+  useEffect(() => {
+    if (location.pathname === ROUTES.SUBSCRIBE) {
+      setShowModal(true);
+    }
+  }, [location]);
 
   useEffect(() => {
     const interval = setInterval(() => setShootStars(!shootStars), 15000);
@@ -18,8 +26,14 @@ const Home = (props) => {
     };
   }, [shootStars]);
 
+  const handleShowModal = () => {
+    history.push(ROUTES.SUBSCRIBE);
+    setShowModal(true);
+  };
+
   const onCloseModal = () => {
     setShowModal(false);
+    history.push(ROUTES.HOME);
   };
 
   return (
@@ -52,7 +66,7 @@ const Home = (props) => {
         <Row className="justify-content-md-center text-center">
           <Col className="subscribe">
             <p>Be the first to know when it will be launched</p>
-            <Button onClick={handleShow}>Subscribe</Button>
+            <Button onClick={handleShowModal}>Subscribe</Button>
           </Col>
         </Row>
         <Subscribe show={showModal} onClose={onCloseModal} />

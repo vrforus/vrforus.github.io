@@ -10,7 +10,6 @@ import { Container, Navbar } from 'react-bootstrap';
 
 import Logo from '../../logo.svg';
 import HomePage from '../Home';
-import SubscribePage from '../Subscribe';
 
 import * as ROUTES from '../../constants/routes';
 import { withFirebase } from '../Firebase';
@@ -64,8 +63,8 @@ const Footer = () => (
 const App = () => (
   <Router>
     <Header />
-    <Route path="/" component={HomePage} />
-    <Redirect to="/" />
+    <Route path={ROUTES.HOME} component={HomePage} />
+    <Redirect to={ROUTES.HOME} />
     <Footer />
   </Router>
 );
