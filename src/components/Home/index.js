@@ -65,7 +65,7 @@ const Home = (props) => {
 
         <Row className="justify-content-md-center text-center">
           <Col className="subscribe">
-            <p>Be the first to know when it will be launched</p>
+            <p>Be the first to know when it will be launched!</p>
             <Button onClick={handleShowModal}>Subscribe</Button>
           </Col>
         </Row>

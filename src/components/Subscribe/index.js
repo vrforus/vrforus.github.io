@@ -52,15 +52,18 @@ const Subscribe = (props) => {
   return (
     <>
       <Modal show={props.show} onHide={props.onClose}>
-        <Modal.Header closeButton>
-          Subscribe
-        </Modal.Header>
+        <Modal.Header closeButton />
         <Modal.Body>
+          <h4>Be the first to know when it will be launched!</h4>
           <Form onSubmit={handleSubmit}>
+            <br />
             <Form.Control type="text" name="name" placeholder="Name" required />
             <br />
             <Form.Control type="email" name="email" placeholder="Email" required />
             <br />
+            <Form.Check type="checkbox" label="I allow VRfor.us to inform me about the product launch." required/>
+            <br />
+
             <Button type="submit">
               Subscribe
             </Button>
