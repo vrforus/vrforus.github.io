@@ -57,9 +57,9 @@ const Subscribe = (props) => {
         </Modal.Header>
         <Modal.Body>
           <Form onSubmit={handleSubmit}>
-            <Form.Control type="text" name="name" placeholder="Name" />
+            <Form.Control type="text" name="name" placeholder="Name" required />
             <br />
-            <Form.Control type="email" name="email" placeholder="Email" />
+            <Form.Control type="email" name="email" placeholder="Email" required />
             <br />
             <Button type="submit">
               Subscribe
