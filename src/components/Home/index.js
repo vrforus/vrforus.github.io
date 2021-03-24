@@ -49,7 +49,7 @@ const Home = (props) => {
       <Container>
         <Row className="justify-content-md-center text-center">
           <Col className="product-name">
-            <h1>Our Earth</h1>
+            <h1>Odyssey</h1>
             <h2>
               a virtual reality simulator
               <br />
